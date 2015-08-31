@@ -124,6 +124,7 @@ var width = 960,
 // get the data
 d3.json("migrantDeaths.json", function(_) {
   data = _;
+  console.log("data.length", data.length)
 
   // remove items with missing dates;
   data = data.filter(function(d) { if (d.date != "") return true; })
